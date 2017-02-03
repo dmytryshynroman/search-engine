@@ -19,6 +19,9 @@ public class SearchEngineServlet extends HttpServlet {
         // out.println("<html>My Servlet</html>");
         // out.close();
 
+        String json = "{\"text\":[\"Java\",\"JavaC\"],\"metaData\":{\"fileName\":\"javaLangSpec.txt\"," +
+                "\"fileSize\":\"900KB\",\"fileCreationDate\":\"January 23, 1996 at 12: 52PM\"}}";
+
         String text = request.getParameter("q");
         String limit = request.getParameter("limit");
         String length = request.getParameter("length");
@@ -26,7 +29,9 @@ public class SearchEngineServlet extends HttpServlet {
         // And modify existing code to (this is done to assure that we parsed
         // request parameters on backend successfully):
         PrintWriter out = response.getWriter();
-        out.println("<html>" + text + " " + limit + " " + length + " " + includeMetaData + "</html>");
+        response.setContentType("application/json");
+        out.println(json);
+        //out.println("<html>" + text + " " + limit + " " + length + " " + includeMetaData + "</html>");
         out.close();
 
     }
