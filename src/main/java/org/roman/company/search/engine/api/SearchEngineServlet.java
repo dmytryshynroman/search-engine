@@ -12,7 +12,7 @@ public class SearchEngineServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        System.out.println("Info");
+        System.out.println("Info >>>>>>>>>>>>>>>>>>>");
         // response.getWriter().append("Served at:
         // ").append(request.getContextPath());
         // PrintWriter out = response.getWriter();
