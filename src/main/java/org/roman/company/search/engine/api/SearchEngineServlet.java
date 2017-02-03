@@ -14,7 +14,7 @@ public class SearchEngineServlet extends HttpServlet {
         System.out.println("Info");
         response.getWriter().append("Served at: ").append(request.getContextPath());
         PrintWriter out = response.getWriter();
-        out.println("\nHelllloooo !!!!");
+        out.println("Hel                       lloooo !!!!");
         out.close();
 
     }
